@@ -19,7 +19,7 @@ import java.util.Set;
 public class stringtest {
 
     private static boolean nextWord = true;
-    /* Decided on a HashSet to store uniques because it can't have duplicated
+    /* Decided on a HashSet to store uniques because it can't have duplicates
     and has a seek time of O(1). */
     private static Set<String> hashSet = new HashSet<>();
     
@@ -38,7 +38,7 @@ public class stringtest {
     }
     
     /* The assumption was made that if a single character existed between 
-    delineations then that is all that should be returned in the new String. For
+    delineations then that is all that should be returned in the new string. For
     example "x" should return just "x" so that it can be differentiated from
     "xx" which would return "x0x".
     */
@@ -49,7 +49,7 @@ public class stringtest {
             if(Character.isLetter(chars[i])) {
                 if(nextWord == true) {
                     /* If the character is in the alphabet and it's the start of
-                    the word add it to the return sring. */
+                    the word add it to the return string. */
                     returnString += chars[i];
                     /* Since it's no longer the start of a new word set nextWord
                     to false. */
